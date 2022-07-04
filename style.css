@@ -18,6 +18,63 @@ body {
   align-items: center;
   background: url("/robot.gif");
   background-repeat: no-repeat;
-  background-size: 750px;
-  background-position:calc(80% + 50px) center;
+  background-size: 60vh;
+  background-position:calc(70% + 10vh) center;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  width: 20vh;
+  height: 5vh;
+  border-radius: 10px;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: oblique;
+  text-transform: uppercase;
+  color: aqua;
+  background-color: black;
+  border: none;
+  margin: 10px;
+  box-shadow: 2px 2px 10px 5px;
+}
+
+button:hover {
+  filter: brightness(85%);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+
+/* Media Query: Tablet or Smaller */
+@media screen and (max-width: 1000px) {
+  .container {
+    background-size: 50vh;
+    background-position: center center;
+  }
+
+  button {
+    box-shadow: 5px 5px 20px 10px rgba(0, 255, 255, 0.5);
+  }
+
+  button:hover {
+    filter: brightness(85%);
+  }
+  
+  button:active {
+    transform: scale(0.90);
+  }
+
+  button:disabled {
+    cursor: default;
+    filter: brightness(30%);
+  }
+
 }
