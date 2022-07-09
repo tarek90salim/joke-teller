@@ -62,6 +62,7 @@ button:disabled {
 
   button {
     box-shadow: 5px 5px 20px 10px rgba(0, 255, 255, 0.5);
+    font-size: 18px;
   }
 
   button:hover {
