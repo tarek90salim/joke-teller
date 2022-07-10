@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("/swinging-robot.gif");
+  background: url("swinging-robot.gif");
   background-repeat: no-repeat;
   background-size: 60vh;
   background-position:calc(70% + 10vh) center;
