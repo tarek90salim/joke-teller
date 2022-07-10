@@ -1,5 +1,5 @@
-const audioElement = document.getElementById('audio');
-const btn = document.getElementById("btn");
+const audioElement = document.getElementById("audio");
+const button = document.getElementById("button");
 
 // VoiceRSS Javascript SDK unminified
 const VoiceRSS = {
@@ -87,7 +87,17 @@ const VoiceRSS = {
     },
 };
 
-// PAssing jokes t VoiceRSS API
+// Disable Button
+function disableButton() {
+    button.disabled =true;
+}
+
+//Enable Button
+function enableButton() {
+    button.disabled = false;
+}
+
+// Passing jokes t VoiceRSS API
 function tellMe(joke) {
     VoiceRSS.speech({
         key: 'df304c823766468ba56640955ecb6b5d',
@@ -113,12 +123,16 @@ async function getJokes() {
         } else {
             joke = data.joke;
         }
+        // Text-to-Speech
         tellMe(joke);
+        // Disable button
+        disableButton();
     } catch (error) {
         // Catch errors here
         console.log("Error", error)
     }
 }
 
-// On load
-getJokes();
+// Event Listeners
+button.addEventListener("click", getJokes);
+audioElement.addEventListener("ended", enableButton);
